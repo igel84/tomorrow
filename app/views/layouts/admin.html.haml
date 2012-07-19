@@ -1,0 +1,50 @@
+!!!
+%html
+	%head
+		%title завтра/2morrow
+		%meta{:name=>"keywords", :content=>"кинофестиваль"}
+		%meta{:name=>"description", :content=>"кинофестиваль"}		
+		= stylesheet_link_tag "reset", "ie.css", "screen.css", "print.css", "admin", "ui-lightness/jquery-ui-1.8.13.custom.css"
+		= javascript_include_tag 'jquery.js', 'jquery_ujs.js', 'jquery-ui-1.8.13.custom.min', 'admin.js'
+		=# :defaults, "script", "message_send"
+		= csrf_meta_tag
+	%body
+		- if admin?
+			= link_to "выйти", logout_path, :style=>'margin:10px;'
+		%br/
+		%table{:width=>'98%', :style=>'margin:10px;'}
+			%tr
+				%td{:width=>'250px'}				
+					#admin_menu
+						%ul
+							- 1.upto(5) do |id|
+								- page = Page.find(id)
+								%li
+									= page.name
+									%ul
+										%li{:class=>'first'}
+											= link_to "добавить статью", new_pages_path(:id=>page.id)
+											- Page.children(page.id).each do |ch|
+												- if !(page.id==4 && ch.id==6)
+													%li
+														= link_to ch.name, edit_pages_path(:id=>ch.id)
+							%li
+								Тема фестиваля
+								%ul
+									%li
+										= link_to 'правка', edit_pages_path(:id=>7)
+							-#%li
+							-#	Площадки фестиваля
+							-#	%ul
+							-#		%li
+							-#			= link_to '"правка"', edit_pages_path(:id=>8)
+							%li
+								Новости
+								%ul
+									%li{:class=>'first'}
+										= link_to "добавить статью", new_pages_path(:id=>6)
+										- Page.children(6).each do |ch|
+											%li
+												= link_to ch.name, edit_pages_path(:id=>ch.id)
+				%td
+					= yield

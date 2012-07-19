@@ -1,0 +1,6 @@
+%h1 
+	= 'Добавление статьи в раздел "'+@curent_page.name+'"'
+- form_for :page, :html => { :multipart => true }, :url=> create_pages_path do |f|
+	= f.hidden_field(:parent_id, :value => @curent_page.id)	
+	%br/
+	= render :partial=>'form_page', :locals => {:f => f, :parent => @curent_page.id, :position => '0' }

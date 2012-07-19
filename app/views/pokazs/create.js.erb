@@ -1,0 +1,2 @@
+$('#pokaz').hide();
+$("<tr class='pokaz' id='pokaz_<%= @pokaz.id %>'><%= escape_javascript(render :partial=>'item', :locals=>{ :pokaz=>@pokaz } ) %></tr>").insertBefore("#pokaz_table_end")

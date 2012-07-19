@@ -1,0 +1,12 @@
+%h1= @title
+- @pages.each do |page|
+	- if page && page.id!=6
+		%h1{:style=>'border:none; font: normal 13px Tahoma,sans-serif;'}= page.name
+		.list_img
+			= image_tag page.photo.url if page.photo.present? 
+			- if page.parent_id == 5
+				.pokaz_film
+					%h3 Показы кинофильма:
+					= render :partial => 'homes/pokaz', :locals => { :page => page }
+			= link_to "подробнее ...", show_path(:id=>page.id), :class=>"all_href"
+		.clear

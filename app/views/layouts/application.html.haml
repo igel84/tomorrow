@@ -1,0 +1,243 @@
+!!!
+%html
+	%head
+		%title 5 фестиваль
+		= favicon_link_tag 'title_logo.png'
+		%meta{:name=>"keywords", :content=>"кинофестиваль"}
+		%meta{:name=>"description", :content=>"кинофестиваль"}		
+		= stylesheet_link_tag "reset", "ie.css", "screen.css", "print.css", "fancy", "layout"
+		= javascript_include_tag "jquery.js", "jquery.fancybox.js", "rails.js", "application.js"
+		=# :defaults, "script", "message_send"
+		= csrf_meta_tag
+	%body
+		%table#main{:width=>'100%'}
+			%tr.one
+				%td{:width=>'10px'} &nbsp;
+				%td.left{:width=>'213px'}
+					%table
+						%tr
+							%td
+								#logo
+									- if !eng?
+										%h2 КАЛЕНДАРЬ
+									- else
+										%h2 CALENDAR
+						%tr
+							%td
+								#kalend
+									- if !eng?
+										%h3 Расписание показов
+									- else
+										%h3 Showtimes
+									%table
+										%tr
+											%td.first ПН
+											%td.first ВТ
+											%td.first СР
+											%td.first ЧТ
+											%td.first ПТ
+											%td.first СБ
+											%td.first ВС
+										%tr
+											%td 26
+											%td 27
+											%td 28
+											%td 29
+											%td 30
+											%td 1
+											%td 2
+										%tr
+											- 3.upto(9) do |n|
+												%td= n
+										%tr
+											- 10.upto(16) do |n|
+												%td= n
+										%tr
+											- 17.upto(23) do |n|
+												%td
+													- if kalend? n
+														= link_to n.to_s, kalend_date_path(:id=>n)
+													- else
+														= n
+										%tr
+											- 24.upto(30) do |n|
+												%td= n
+						%tr
+							%td
+								#prog
+									- if !eng?
+										%h2 ПРОГРАММА 2011
+									- else
+										%h2 PROGRAMME 2011
+						%tr
+							%td
+								#prog_menu
+									%ul
+										- if page=Page.children(2)
+											- page.each do |ch|
+												- if !eng?
+													%li
+														= link_to ch.name, show_path(:id=>ch.id)
+										-# 10.times do
+										-#	%li
+										-#		%a Фильм открытия
+				%td.left_center{:width=>'15px'} &nbsp;
+				%td.center{:rowspan=>'4', :height=>'1000px;'}
+					#head
+						.year	
+							.year_logo
+							.year_bottom
+						.header
+							- if !eng?
+								%h1.header_text МЕЖДУНАРОДНЫЙ ЕЖЕГОДНЫЙ КИНОФЕСТИВАЛЬ НЕЗАВИСИМОГО КИНО
+							- else
+								%h1.header_text INTERNATIONAL ANNUAL FESTIVAL OF INDEPENDENT CINEMA
+							.header_logo
+							.head_bottom
+					#menu
+						.menu_top
+						.menu_top_bg
+							= link_to "Russian/English", language_path, :class=>"language"
+					#buttons
+						.menu_left
+						%ul#main_menu
+							%li
+								- if !eng?
+									= link_to "О ФЕСТИВАЛЕ", all_pages_path(:id=>1), :class=>'but fest'
+									- if page = Page.children(1)
+										%ul
+											- page.each do |ch|
+												- if !ch.eng?
+													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
+								- else
+									= link_to "ABOUT", show_path(:id=>110), :class=>"but fest"
+									- if page = Page.children(1)
+										%ul
+											- page.each do |ch|
+												- if ch.eng?
+													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
+							%li
+								- if !eng?
+									=link_to "ПРОГРАММА 2011", all_pages_path(:id=>2), :class=>'but prog'
+									- if page = Page.children(2)
+										%ul
+											- page.each do |ch|
+												- if !ch.eng?
+													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
+								- else
+									%a.but.prog{:href=>'#'} PROGRAMME 2011
+									- if page = Page.children(2)
+										%ul
+											- page.each do |ch|
+												- if ch.eng?
+													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
+							%li
+								- if !eng?
+									= link_to 'КИНОФОРУМ "ПРОЕКТ НА ЗАВТРА"', all_pages_path(:id=>3), :class=>'but next'								
+									- if page = Page.children(3)
+										%ul
+											- page.each do |ch|
+												- if !ch.eng?
+													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
+								- else
+									%a.but.next{:href=>'#'} Film Forum "PROJECT FOR TOMORROW"
+							%li
+								- if !eng?
+									= link_to 'КАЛЕНДАРЬ', all_pages_path(:id=>5), :class=>'but kale'
+									- if page = Page.children(5)
+										%ul
+											- 18.upto(24) do |n|
+												- if kalend? n
+													%li.kalend
+														= link_to n.to_s+" октября", kalend_date_path(:id=>n)
+								- else
+									= link_to 'CALENDAR', all_pages_path(:id=>5), :class=>'but kale'
+									- if page = Page.children(5)
+										%ul
+											- 18.upto(24) do |n|
+												- if kalend? n
+													%li.kalend
+														= link_to "October "+n.to_s, kalend_date_path(:id=>n)
+							-# if page = Page.children(5)
+							-#	%ul
+							-#		- page.each do |ch|
+							-#			%li.kalend
+							-#				= link_to ch.name, show_path(:id=>ch.id)
+							%li.acts_but
+								- if !eng?
+									.for_acts
+									= link_to 'СОБЫТИЯ', all_pages_path(:id=>4), :class=>'acts'								
+									- if page = Page.children(4)
+										%ul
+											- page.each do |ch|
+												- if !ch.eng?
+													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
+								- else
+									.for_acts
+									%a.acts{:href=>'#'} EVENTS	
+					.clear
+					- if (@news && @news != [])
+						#news_line
+							%a{:href=>"#", :class=>"left_news"}
+								= image_tag "layout/left_news.png"
+							%a{:href=>"#", :class=>"right_news"}
+								= image_tag "layout/right_news.png"
+							.sc_menu
+								%ul.sc_menu
+									- @news.each do |n|
+										- if n.photo.url != '/photos/original/missing.png'
+											%li
+												= link_to show_path(:id =>n.id) do
+													= image_tag n.photo.url
+						.clear
+					#content									
+						= yield
+				%td.right{:width=>'10px'} &nbsp;
+			%tr.two
+				%td &nbsp;
+				%td.prog_bottom{:colspan=>'2'}
+				%td &nbsp;
+			%tr.three
+				%td.three{:colspan=>'3'} &nbsp;
+				%td.three &nbsp;
+			%tr.four
+				%td &nbsp;
+				%td.bottom_logo{:colspan=>'2'} &nbsp;
+				%td &nbsp;
+			%tr.five
+				%td{ :colspan=>'5' }
+					#footer
+						#social_href
+							- if !eng?
+								%span В социальных сетях:
+							- else
+								%span In social networks:
+							%a{:href=>"http://www.facebook.com/pages/2morrow-festival/141815579163939"}
+								= image_tag "layout/facebook.png"								
+							%a{:href=>"http://2morrowfest.livejournal.com"}
+								= image_tag "layout/twitter.png"
+							%a{:href=>"http://vkontakte.ru/id89645031"}
+								= image_tag "layout/vkontakte.png"
+						#info_href
+							- if !eng?
+								%span Подписка на новости и события:
+							- else
+								%span Subscribe to news and events:
+							%a{:href=>"http://2morrowfest.ru/rss"}
+								= image_tag "layout/rss.png"								
+							%a{:href=>"#"}
+								= image_tag "layout/mail.png"
+						#kontakt_href
+							- if !eng?
+								%span Контактная информация:
+							- else
+								%span Contact Information:
+#otbivka
+	- if !eng?
+		%span &copy; 2007-2012, Международный кинофестиваль "2morrow/Завтра"
+	- else
+		%span &copy; 2007-2012, International Film Festival "2morrow/Завтра"
+	- if !eng?
+		%a{ :href=>"http://atldesign.ru" } Разработчик: ARTLevel_Design
+	- else
+		%a{ :href=>"http://atldesign.ru" } Developer: ARTLevel_Design

@@ -1,0 +1,5 @@
+%h1 Введите пароль для того, чтобы приступить к администрированию
+.login{:style=>'margin-left:100px;'}
+	- form_tag(:action => 'login') do
+		= password_field_tag 'password'
+		= submit_tag 'Войти'

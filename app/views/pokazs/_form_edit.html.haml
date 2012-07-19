@@ -1,0 +1,26 @@
+#pokaz.ui-corner-all
+	- form_for @pokaz, :remote=>true do |f|
+		= f.hidden_field :id
+		.date Дата проведения:	
+		#date_but
+			- 18.upto(23) do |d|
+				- if @pokaz
+					= radio_button_tag 'pokaz[date]', d, @pokaz.date == d
+				- else
+					= radio_button_tag 'pokaz[date]', d, false
+				= label_tag 'pokaz_date_'+d.to_s, d.to_s, :class=>'pokaz'
+		#time_text
+			Время проведения:
+			= text_field_tag 'pokaz[hour]', @pokaz.hour
+			= ":"
+			= text_field_tag 'pokaz[min]', @pokaz.min
+		.clear{:style=>'clear:both;'}
+		#mesto
+			- 1.upto(6) do |d|
+				= label_tag 'pokaz_mesto_'+d.to_s, Mesto.find(d).name
+				- if @pokaz
+					= radio_button_tag 'pokaz[mesto]', d, @pokaz.mesto_id == d
+				- else
+					= radio_button_tag 'pokaz[mesto]', d, false
+		= f.submit 'сохранить', :id=>'send_pokaz'
+	.clear{:style=>'clear:both;'}

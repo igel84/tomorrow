@@ -1,0 +1,20 @@
+class CreatePokazs < ActiveRecord::Migration
+  def self.up
+    create_table :pokazs do |t|
+      t.integer :page_id
+      t.integer :date
+      t.string :time
+      t.integer :mesto_id
+      t.timestamps
+    end
+    
+    Page.find(:all, :conditions => ["parent_id = 5"]).each do |page|
+      pokaz = Pokaz.new { :page_id=>page.id, :date=>page.position }
+      pokaz.save
+    end
+  end
+
+  def self.down
+    drop_table :pokazs
+  end
+end

@@ -1,0 +1,2 @@
+class Mesto < ActiveRecord::Base
+end

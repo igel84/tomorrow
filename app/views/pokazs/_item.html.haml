@@ -1,0 +1,8 @@
+%td	Дата:
+%td= pokaz.date.to_s  if pokaz.date
+%td Время:
+%td= pokaz.time if pokaz.time
+%td Площадка:
+%td= pokaz.mesto.name if pokaz.mesto
+%td= link_to "правка", { :controller=>"pokazs", :action => "edit", :id => pokaz.id }, :remote=>true
+%td= link_to "удалить", pokaz, :method => :delete, :confirm => "вы уверены?", :title => "Удаление показа", :remote=>true

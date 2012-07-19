@@ -1,0 +1,2 @@
+$('#pokaz').hide();
+$("#pokaz_<%= @pokaz.id %>").html("<%= escape_javascript(render :partial=>'item', :locals=>{ :pokaz=>@pokaz } ) %>");

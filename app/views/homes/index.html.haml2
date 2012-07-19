@@ -1,0 +1,18 @@
+#maket
+	#header
+		#logo
+		.right_logo
+		#header_center
+			.top_text
+				международный ежегодный кинофестиваль независимого кино
+			.bottom_text
+		.top_info_date
+			.top_info_date_left
+			.top_info_date_right
+			.top_info_date_center
+			%p 18 - 23 ОКТЯБРЯ
+			.top_info_line
+				sdf
+			.top_info_line
+				sdf
+	.clear

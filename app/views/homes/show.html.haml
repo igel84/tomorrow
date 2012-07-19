@@ -1,0 +1,34 @@
+%h1= @page.name
+- if @page.video_file_name && !@page.video_file_name.blank?
+	%a{:href=>'#tesvideo', :id=>"video_main", :style=>'margin:0;padding:0;'}
+		= image_tag(@page.photo.url, :id=>'main_img') if @page.photo.present?	
+	#tesvideo{:style=>"display:none"}
+		%object{:width=>"640", :height=>"360"}
+			%param{:name=>"movie", :value=>"#{@page.video_file_name}"}
+			%param{:name=>"allowFullScreen", :value=>"true"}
+			%param{:name=>"wmode", :value=>"transparent"}
+			%param{:name=>"allowscriptaccess", :value=>"always"}
+			%embed{:src=>"#{@page.video_file_name}", :type=>"application/x-shockwave-flash", :width=>"640", :height=>"360", :allowscriptaccess=>"always", :allowfullscreen=>"true", :wmode=>"transparent"}
+- else
+	= image_tag(@page.photo.url, :id=>'main_img') if @page.photo.present?
+=#, :style=>'width:100px;' 
+.clear
+- if @page.parent_id == 5
+	.pokaz_film_show
+		%h3 Показы кинофильма:
+		= render :partial => 'pokaz', :locals => { :page => @page }
+!= '<p>к сожалению, страница еще не готова</p>' if @page.body.blank?
+%p!= @page.body
+- if @page.page_hrefs != []
+	- @page.page_hrefs.each do |h|
+		%a{:href=>"/show/#{h.href_id}", :class=>"page_hrefs"}
+			= image_tag(Page.find(h.href_id).photo.url)
+			%span= Page.find(h.href_id).name
+		.clear
+	.clear
+#press
+	- if !eng?
+		%a{:href=>"#", :class=>"href_press"} Пресса
+	- else	
+		%a{:href=>"#", :class=>"href_press"} press
+	=# image_tag "layout/press.png", :class=>"press"

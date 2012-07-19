@@ -1,0 +1,211 @@
+!!!
+%html
+	%head
+		%title завтра/2morrow
+		%meta{:name=>"keywords", :content=>"кинофестиваль"}
+		%meta{:name=>"description", :content=>"кинофестиваль"}		
+		= stylesheet_link_tag "reset", "ie.css", "screen.css", "scaffold.css", "print.css", "fancy", "main.css"
+		= javascript_include_tag "jquery.fancybox.js", "jquery.js", "rails.js", "application.js"
+		= csrf_meta_tag
+	%body
+		%table.main
+			%tr
+				%td.left &nbsp;
+				%td.center
+					%table.top
+						%tr
+							%td.l
+								#logo
+								#kalend
+									.menu_but
+										%span КАЛЕНДАРЬ
+										%h3 Расписание показов
+										%table
+											%tr
+												%td.first ПН
+												%td.first ВТ
+												%td.first СР
+												%td.first ЧТ
+												%td.first ПТ
+												%td.first СБ
+												%td.first ВС
+											%tr
+												%td 26
+												%td 27
+												%td 28
+												%td 29
+												%td 30
+												%td 1
+												%td 2
+											%tr
+												- 3.upto(9) do |n|
+													%td= n
+											%tr
+												- 10.upto(16) do |n|
+													%td= n
+											%tr
+												- 17.upto(23) do |n|
+													%td	
+														- if kalend? n
+															= link_to n.to_s, kalend_date_path(:id=>n)
+														- else
+															= n
+											%tr
+												- 24.upto(30) do |n|
+													%td= n				
+								#key_art
+									= image_tag("main/key-art#{(rand(3)+1).to_s}.png", :id=>"img")
+							%td.r
+								#header
+									.header_left
+										#text_tom
+											%h1 международный ежегодный кинофестиваль независимого кино
+										#logo_tom
+											#im								
+									.header_right						
+								%table#menu_top
+									%tr
+										%td.left_menu_bg &nbsp;
+										%td.right_menu_bg
+											%table.menu
+												%tr.first
+													%td{:colspan=>5} &nbsp;
+												%tr
+													%td
+													%td.spase &nbsp;
+													%td
+														%span ТЕМА ФЕСТИВАЛЯ
+													%td.spase &nbsp;
+													%td
+														%a
+															.language  &nbsp;
+															-#Russian/English
+												%tr
+													%td
+													%td.spase
+													%td
+														%a{:href=>'show?id=7'}
+															%span Исповедь
+													%td.spase
+													%td
+														%span ПЛОЩАДКИ ФЕСТИВАЛЯ
+												%tr
+													%td
+														%span ДАТА ПРОВЕДЕНИЯ
+													%td.spase
+													%td
+														%a{:href=>'show?id=7'}
+															%span Свидетельства
+													%td.spase
+													%td
+														%a{:href=>'show?id=8'}
+															%span "Пионер"
+												%tr
+													%td
+													%td.spase
+													%td
+														%a{:href=>'show?id=7'}
+															%span Дневники
+													%td.spase
+													%td
+														%a{:href=>'show?id=8'}
+															%span "Ролан"
+												%tr
+													%td
+														%a
+															%span
+																.date 18 - 23 ОКТЯБРЯ
+													%td.spase
+													%td
+													%td.spase
+													%td
+														%a{:href=>'show?id=8'}
+															%span "Пять звезд на Новокузнецкой"
+												%tr
+													%td
+													%td.spase
+													%td
+													%td.spase
+													%td
+														%a{:href=>'show?id=8'}
+															%span "Dome"
+												%tr.second
+													%td{:colspan=>5} &nbsp;
+												%tr.second
+													%td{:colspan=>5} &nbsp;
+												%tr.second
+													%td{:colspan=>5} &nbsp;
+								#menu_but
+									.left_but_bg
+									%ul
+										%li.menu_but_line.float_left.fest
+											= link_to "О ФЕСТИВАЛЕ", all_pages_path(:id=>1)
+											- if page = Page.children(1)
+												%ul
+													- page.each do |ch|
+														%li
+															= link_to ch.name, show_path(:id=>ch.id), :class=>'top_menu_but'
+										%li.menu_but_line.float_left.prog
+											= link_to "ПРОГРАММА 2011", all_pages_path(:id=>2)
+											- if page = Page.children(2)
+												%ul
+													- page.each do |ch|
+														%li
+															= link_to ch.name, show_path(:id=>ch.id), :class=>'top_menu_but'
+										%li.menu_but_line.float_left.next
+											= link_to 'КИНОФОРУМ "ПРОЕКТ НА ЗАВТРА"', all_pages_path(:id=>3)
+											- if page = Page.children(3)
+												%ul
+													- page.each do |ch|
+														%li
+															= link_to ch.name, show_path(:id=>ch.id), :class=>'top_menu_but'
+										%li.menu_but_line.float_left.acts
+											= link_to "СОБЫТИЯ", all_pages_path(:id=>4)
+											- if page = Page.children(4)
+												%ul
+													- page.each do |ch|
+														%li
+															= link_to ch.name, show_path(:id=>ch.id), :class=>'top_menu_but'
+										%li.menu_but_line.float_left.kalend
+											= link_to "КАЛЕНДАРЬ", all_pages_path(:id=>5)
+											- if page = Page.children(5)
+												%ul
+													- 18.upto(24) do |n|
+														- if kalend? n
+															%li.kalend
+																= link_to n.to_s+" октября", kalend_date_path(:id=>n), :class=>'top_menu_but'
+									.last
+								%table.video
+									%tr
+										%td#video_top{:colspan=>3} &nbsp;
+									%tr
+										%td#video_left &nbsp;
+										%td#video_center
+											%a{:href=>'#tesvideo', :id=>"video_main", :style=>'margin:0; padding:0;'}
+												= image_tag "main/video.png"
+											-# %iframe.video_klip{:width=>"640", :height=>"355", :src=>"http://www.youtube.com/embed/i8kuqMkMGYI", :frameborder=>"0", :noresize=>"no", :noborder=>"noborder", :spacing=>"0", :allowfullscreen=>"true", :scrolling=>"no", :hspace=>"0", :vspace=>"0", :marginwidth=>"0", :marginheight=>"0", :top=>"0",  :style=>"z-index:100; wmode:'transparent';"} Your browser does not support iFrames
+											#tesvideo{:style=>"display:none"}
+												%object{:width=>"640", :height=>"360"}
+													%param{:name=>"movie", :value=>"http://www.youtube.com/v/i8kuqMkMGYI?version=3&amp;hl=en_US"}
+													%param{:name=>"allowFullScreen", :value=>"true"}
+													%param{:name=>"wmode", :value=>"transparent"}
+													%param{:name=>"allowscriptaccess", :value=>"always"}
+													%embed{:src=>"http://www.youtube.com/v/i8kuqMkMGYI?version=3&amp;hl=en_US", :type=>"application/x-shockwave-flash", :width=>"640", :height=>"360", :allowscriptaccess=>"always", :allowfullscreen=>"true", :wmode=>"transparent"}
+										%td#video_right
+					%table#bottom
+						%tr
+							%td#news
+								= link_to "НОВОСТИ", show_path(:id=>6), :class=>'bottom_menu'
+							%td#acts
+								= link_to "СОБЫТИЯ", all_pages_path(:id=>4), :class=>'bottom_menu'
+							%td#prog
+								= link_to "ПРОГРАММА", all_pages_path(:id=>2), :class=>'bottom_menu'
+					%table#bottom2
+						%tr
+							%td#fest
+								= link_to "КИНОФЕСТИВАЛЬ", show_path(:id=>1), :class=>'bottom_menu'
+							%td#next
+								= link_to "ПРОЕКТ НА ЗАВТРА", all_pages_path(:id=>3), :class=>'bottom_menu'
+					#footer					
+				%td.right &nbsp;
+		#otbivka

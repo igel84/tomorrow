@@ -1,0 +1,105 @@
+html {min-height: 100%; margin: 0; padding: 0;}
+a {
+	color: #963; border: none;
+	&:hover {color: #C60; border: none;}
+	cursor: pointer;
+	}
+body {
+	background: #230230230;
+	color: #333;
+	font: normal 62.5% Tahoma, sans-serif
+}
+#maket {
+	width: 100%;
+	margin: 0 auto;
+}
+#header {
+	background: #222 url('../images/topback.png') repeat-x;
+	height: 360px;
+}
+#logo {
+	background: url('../images/toplogo1.png') no-repeat;
+	height: 797px;
+	width: 213px;
+	margin-left: 10px;
+	float:left;
+}
+.right_logo {
+        top: 0;
+	background: url('../images/toprightall.png') no-repeat;
+        height: 156px;
+        width: 242px;
+        margin-right: 10px;
+        margin-top: 0;
+	float:right;
+}
+#header_center {
+	margin-left:223px;
+  margin-right:252px;
+}
+.top_text {
+	background: url('../images/toptext.png') repeat-x;
+        height: 31px;
+	color: white;
+	font: normal 0.8em Tahoma,sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 6px;
+}
+.bottom_text {
+	background: url('../images/name.png') no-repeat;
+	width: 492px;
+	height: 56px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+}
+.top_info_date {
+	margin-left: 223px;
+	//margin-right: 0;
+	top:122px;
+	width: 30%;
+	float:left;
+	position: absolute;
+	font-size: 11px;
+	p {
+		font-size:18px;
+		text-align:center;
+		margin-top:-88px;
+	}
+}
+.top_info_line {
+	background: url('../images/info_line.png') repeat-x;
+	float:left;
+	//top:122px;
+	//margin-left:100px;
+	min-width: 5%;
+	height: 195px;
+	//float: left;
+	//position: absolute;
+}
+.top_info_date_left {
+	background: url('../images/date_left.png') no-repeat;
+  width: 49px;
+  height: 195px;
+  //position: relative;
+	float:left;
+}
+.top_info_date_center {
+  background: url('../images/date_center.png') repeat-x;
+  //width: 50%;
+  height: 195px;
+  //float:left;
+  //position: relative;
+}
+.top_info_date_right {
+  background: url('../images/date_right.png') no-repeat;
+  width: 117px;
+  height: 195px;
+  //position: relative;
+	float:right;
+	//float:right;
+}
+.clear {
+	clear: both;
+}

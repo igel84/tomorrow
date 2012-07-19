@@ -1,0 +1,17 @@
+xml.instruct!
+
+xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
+ xml.channel do
+   xml.title "Фестиваль современного кино «Завтра/2morrow»"
+   xml.link "http://#{request.host}/"
+   xml.description "Фестиваль представляет конкурсную программу (основная), а также несколько специальных программ и ретроспектив, в которых отражены яркие и неожиданные течения современного мирового арт-кино."
+   @pages.each do |page|
+     xml.item do
+       xml.title page.name
+       xml.link "http://#{request.host}/show?id=#{page.id}"
+       xml.description page.body
+       xml.guid "http://#{request.host}/#{path_for(page)}"
+     end
+   end
+ end
+end

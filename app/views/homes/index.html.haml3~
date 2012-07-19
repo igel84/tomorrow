@@ -1,0 +1,63 @@
+#header
+	#left_col
+	#right_col
+		#right_header
+			#right_logo
+			#top_info
+				#top_text
+					международный ежегодный кинофестиваль независимого кино
+				#top_logo
+		#right_rub			
+			.info_box_date
+				%p 18 - 23 ОКТЯБРЯ
+			.top_info_line_middle
+			.info_box_theme
+				%a.is Исповедь
+				%a.sv Свидетельства
+				%a.dn Дневники
+			.info_box_mesto
+				%a.pi "Пионер"
+				%a.ro "Ролан"
+				%a.zv "Пять звезд на Новокузнецкой"
+			.top_info_line
+		#right_menu
+			-#.left_menu_box
+			.button.b_first
+				%a.menu О ФЕСТИВАЛЕ
+			.button.b_second
+				%a.menu ПРОГРАММА 2011		
+			.button.b_three
+				%a.menu КИНОФОРУМ "ПРОЕКТ НА ЗАВТРА"	
+			.button.b_four
+				%a.menu СОБЫТИЯ
+			.button.b_five
+				%a.menu КАЛЕНДАРЬ
+			.b_center
+		#right_video
+			%table.vid
+				%tr.vid_top
+					%td.vid_l{ :rowspan=>'3' } &nbsp;
+					%td.vid_space{ :rowspan=>'3' } &nbsp;
+					%td.vid_bl{ :rowspan=>'3' }
+					%td.vid_c.top &nbsp;
+					%td.vid_br{ :rowspan=>'3' } &nbsp;
+					%td.vid_space{ :rowspan=>'3' } &nbsp;
+					%td.vid_r{ :rowspan=>'3' } &nbsp;
+					%td.vid_r_space{ :rowspan=>'3' } &nbsp;
+				%tr.vid_mid
+					%td.vid_c.mid
+						%iframe.video_klip{:width=>"631", :height=>"355", :src=>"http://www.youtube.com/embed/i8kuqMkMGYI", :frameborder=>"0", :noresize=>"no", :noborder=>"noborder", :spacing=>"0", :allowfullscreen=>"true", :scrolling=>"no", :hspace=>"0", :vspace=>"0", :marginwidth=>"0", :marginheight=>"0"} Your browser does not support iFrames
+				%tr.vid_bot
+					%td.vid_c.bot &nbsp;
+#bottom
+#sub_menu
+	.sub.news
+	-#.sub.space_left
+	.sub.acts
+	.sub_prog
+	.sub_space
+#sub_menu2
+	.sub.fest
+	.sub_proj
+	.sub_space_bottom
+#footer

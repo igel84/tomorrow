@@ -1,0 +1,10 @@
+- page.pokazs.each do |p|
+	.pokaz_row
+		.pokaz_info.date
+			- if p.date
+				= link_to p.date.to_s+" октября ", kalend_date_path(:id=>p.date)
+		.pokaz_info.time= p.time if p.time
+		.pokaz_info.mesto
+			- if p.mesto
+				= link_to 'кинотеатр "'+p.mesto.name+'"', { :controller=>'pokazs', :action=>'show', :id=>p.mesto.id }
+	%br/

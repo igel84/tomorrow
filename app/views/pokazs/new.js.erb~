@@ -1,0 +1,2 @@
+$("<%= escape_javascript(render :partial=>'form_create', :locals=>{ :pokaz=>@pokaz } ) %>").insertAfter("#add_pokaz")
+$('body').butEffect();

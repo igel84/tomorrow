@@ -1,0 +1,727 @@
+@charset "UTF-8";
+/* line 2, ../../app/stylesheets/main.scss */
+body {
+  height: 1800px;
+  background: #e6e6e6;
+}
+
+/* line 3, ../../app/stylesheets/main.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  top: 0;
+}
+
+/* line 10, ../../app/stylesheets/main.scss */
+.main {
+  width: 100%;
+}
+/* line 12, ../../app/stylesheets/main.scss */
+.main .left {
+  background: #222222 url("../images/main/left_bg.png") repeat-x;
+}
+/* line 15, ../../app/stylesheets/main.scss */
+.main td.center {
+  width: 986px;
+  valign: top;
+}
+/* line 19, ../../app/stylesheets/main.scss */
+.main td.center table.top td.l {
+  width: 213px;
+}
+/* line 20, ../../app/stylesheets/main.scss */
+.main td.center table.top #logo {
+  background: #222222 url("../images/main/logo.png") no-repeat;
+  width: 213px;
+  height: 203px;
+}
+/* line 27, ../../app/stylesheets/main.scss */
+.main #bottom {
+  height: 100%;
+}
+/* line 30, ../../app/stylesheets/main.scss */
+.main .right {
+  background: #222222 url("../images/main/right_bg.png") repeat-x;
+}
+
+/* line 34, ../../app/stylesheets/main.scss */
+#header {
+  top: 0px;
+  padding: 0;
+}
+/* line 37, ../../app/stylesheets/main.scss */
+#header #text_tom {
+  width: 531px;
+  margin: 0;
+  height: 32px;
+  background: url("../images/main/toptext.png") repeat-x;
+  color: white;
+}
+/* line 44, ../../app/stylesheets/main.scss */
+#header #text_tom h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 6px;
+  font: normal 0.8em Tahoma,sans-serif;
+  letter-spacing: 1px;
+}
+/* line 52, ../../app/stylesheets/main.scss */
+#header #logo_tom {
+  border-top: solid 1px #717070;
+  border-bottom: solid 1px #717070;
+  width: 531px;
+  height: 78px;
+  background: #050505;
+}
+/* line 59, ../../app/stylesheets/main.scss */
+#header #logo_tom #im {
+  margin-left: auto;
+  margin-right: auto;
+  width: 492px;
+  margin-top: 10px;
+  height: 75px;
+  background: url("../images/main/name.png") no-repeat;
+}
+
+/* line 69, ../../app/stylesheets/main.scss */
+.header_right {
+  margin-left: 531px;
+  background: url("../images/main/year2012.png") repeat-x;
+  width: 242px;
+  height: 111px;
+  border-bottom: solid 1px #717070;
+}
+
+/* line 78, ../../app/stylesheets/main.scss */
+.header_left {
+  float: left;
+}
+
+/* line 83, ../../app/stylesheets/main.scss */
+table#menu_top {
+  clear: both;
+  display: block;
+  margin-top: 0;
+  top: 0;
+  height: 229px;
+  width: 773px;
+}
+/* line 90, ../../app/stylesheets/main.scss */
+table#menu_top td.left_menu_bg {
+  background: url("../images/main/left_menu_bg.png") repeat-x;
+  width: 15px;
+  height: 229px;
+}
+/* line 96, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg {
+  background: url("../images/main/right_menu_bg.png") repeat-x;
+  width: 758px;
+}
+/* line 102, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu {
+  display: block;
+  color: #3b3b3b;
+  font: normal 11px Tahoma, sans-serif;
+}
+/* line 104, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr.first td {
+  height: 19px;
+}
+/* line 105, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr.second td {
+  height: 24px;
+}
+/* line 112, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td {
+  text-align: right;
+  height: 23px;
+  font-size: 13px;
+}
+/* line 113, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a.language {
+  line-height: 23px;
+  font-size: 11px;
+  text-align: left;
+  text-indent: 150px;
+}
+/* line 119, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a {
+  text-decoration: none;
+  color: #3b3b3b;
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 240px;
+  display: block;
+  height: 23px;
+  text-align: right;
+}
+/* line 127, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a span {
+  padding-right: 18px;
+  line-height: 21px;
+}
+/* line 128, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a .date {
+  display: block;
+  margin-left: 60px;
+  line-height: 23px;
+  font-size: 15px;
+}
+/* line 131, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a .date:hover {
+  background: url("../images/toptext.png") repeat-x;
+  color: #e4e4e5;
+}
+/* line 139, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a:hover {
+  background: url("../images/toptext.png") repeat-x;
+  color: #e4e4e5;
+}
+/* line 141, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a:hover span {
+  margin-right: 10px;
+}
+/* line 143, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a:hover span .date {
+  margin-right: 0;
+}
+/* line 145, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td a:hover .language {
+  margin-right: 0;
+  background: none;
+}
+/* line 151, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu tr td span {
+  padding-right: 8px;
+  line-height: 21px;
+}
+/* line 159, ../../app/stylesheets/main.scss */
+table#menu_top td.right_menu_bg table.menu td.spase {
+  width: 16px;
+}
+
+/* line 163, ../../app/stylesheets/main.scss */
+#menu_but {
+  font: normal 11px Tahoma, sans-serif;
+}
+/* line 166, ../../app/stylesheets/main.scss */
+#menu_but .left_but_bg {
+  background: url("../images/main/menu_but_left.png") no-repeat;
+  height: 26px;
+  width: 36px;
+  float: left;
+}
+/* line 172, ../../app/stylesheets/main.scss */
+#menu_but .float_left {
+  float: left;
+}
+/* line 173, ../../app/stylesheets/main.scss */
+#menu_but .fest {
+  width: 126px;
+}
+/* line 174, ../../app/stylesheets/main.scss */
+#menu_but .prog {
+  width: 147px;
+}
+/* line 175, ../../app/stylesheets/main.scss */
+#menu_but .next {
+  width: 249px;
+}
+/* line 176, ../../app/stylesheets/main.scss */
+#menu_but .acts {
+  width: 100px;
+}
+/* line 177, ../../app/stylesheets/main.scss */
+#menu_but .kalend {
+  width: 114px;
+}
+/* line 178, ../../app/stylesheets/main.scss */
+#menu_but .last {
+  margin-left: 772px;
+  height: 26px;
+  background: url("../images/main/but_line_right.png") right no-repeat;
+}
+/* line 183, ../../app/stylesheets/main.scss */
+#menu_but .menu_but_line {
+  background: url("../images/main/but_line_left2.png") left bottom no-repeat, url("../images/main/but_line_cent.png") repeat-x;
+  font: normal 11px Tahoma, sans-serif;
+  height: 26px;
+  text-align: center;
+  color: #3b3b3b;
+}
+/* line 190, ../../app/stylesheets/main.scss */
+#menu_but .menu_but_line a {
+  color: #3b3b3b;
+  font-size: 11px;
+  line-height: 26px;
+  padding-top: 6px;
+  text-decoration: none;
+}
+/* line 196, ../../app/stylesheets/main.scss */
+#menu_but .menu_but_line a:hover {
+  color: #8d0b1a;
+}
+/* line 200, ../../app/stylesheets/main.scss */
+#menu_but .menu_but_line:hover {
+  color: #8d0b1a;
+}
+/* line 205, ../../app/stylesheets/main.scss */
+#menu_but ul li ul {
+  position: absolute;
+  left: -3000px;
+}
+/* line 208, ../../app/stylesheets/main.scss */
+#menu_but ul li ul li.kalend {
+  width: 115px;
+}
+/* line 209, ../../app/stylesheets/main.scss */
+#menu_but ul li ul li.events {
+  width: 215px;
+}
+/* line 210, ../../app/stylesheets/main.scss */
+#menu_but ul li ul li {
+  z-index: 10000;
+  height: 25px;
+  width: 280px;
+  background: #121317;
+  border-bottom: solid 1px #3b3b3b;
+}
+/* line 218, ../../app/stylesheets/main.scss */
+#menu_but ul li ul li:hover {
+  background: url("../images/main/toptext.png") repeat-x;
+}
+/* line 221, ../../app/stylesheets/main.scss */
+#menu_but ul li ul li a.top_menu_but {
+  display: block;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  padding-left: 10px;
+  background: url("../images/layout/cross_grey.png") left no-repeat;
+  font: normal 13px Tahoma,sans-serif;
+  color: #bbb;
+}
+/* line 233, ../../app/stylesheets/main.scss */
+#menu_but ul li ul li a.top_menu_but:hover {
+  margin-left: 20px;
+  color: #bbb;
+}
+
+/* line 242, ../../app/stylesheets/main.scss */
+td#video_top {
+  background: url("../images/main/video_top.png") no-repeat;
+  height: 34px;
+  width: 773px;
+}
+
+/* line 247, ../../app/stylesheets/main.scss */
+td#video_left {
+  background: url("../images/main/video_left.png") no-repeat;
+  height: 397px;
+  width: 75px;
+}
+
+/* line 253, ../../app/stylesheets/main.scss */
+td#video_right {
+  width: 58px;
+  height: 397px;
+  background: url("../images/main/video_right.png") no-repeat;
+}
+
+/* line 258, ../../app/stylesheets/main.scss */
+td#video_center {
+  margin: 0;
+  padding: 0;
+  height: 396px;
+  width: 640px;
+  background: #d0d0d0 url("../images/main/video_bottom2.png") right bottom no-repeat;
+  border-bottom: solid 1px #717070;
+  top: 0;
+}
+/* line 266, ../../app/stylesheets/main.scss */
+td#video_center img {
+  display: block;
+  padding-bottom: 39px;
+}
+/* line 267, ../../app/stylesheets/main.scss */
+td#video_center iframe {
+  display: block;
+  padding-bottom: 39px;
+}
+
+/* line 269, ../../app/stylesheets/main.scss */
+#video_bottom {
+  height: 22px;
+  background: #d0d0d0 url("../images/main/video_bottom2.png") right bottom no-repeat;
+}
+
+/* line 273, ../../app/stylesheets/main.scss */
+#kalend {
+  background: url("../images/main/kalend_left.png") left bottom no-repeat, url("../images/main/kalend_right.png") right bottom no-repeat, url("../images/main/kalend_center.png") bottom repeat-x;
+  width: 213px;
+  height: 198px;
+  font-size: 11px;
+}
+/* line 279, ../../app/stylesheets/main.scss */
+#kalend h3 {
+  font-size: 12px;
+  font-stretch: wider;
+  padding-left: 12px;
+  padding-top: 35px;
+  color: #700;
+}
+/* line 286, ../../app/stylesheets/main.scss */
+#kalend table {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 7px;
+}
+/* line 290, ../../app/stylesheets/main.scss */
+#kalend table .first {
+  border-bottom: solid 1px #c0c0c0;
+}
+/* line 291, ../../app/stylesheets/main.scss */
+#kalend table td {
+  font-size: 11px;
+  padding-left: 2px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+/* line 297, ../../app/stylesheets/main.scss */
+#kalend table td a {
+  text-decoration: none;
+  border: none;
+  color: #ffb03d;
+}
+
+/* line 305, ../../app/stylesheets/main.scss */
+#key_art {
+  width: 211px;
+  height: 395px;
+  border: solid 1px #3b3b3b;
+}
+/* line 310, ../../app/stylesheets/main.scss */
+#key_art #img {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 316, ../../app/stylesheets/main.scss */
+.info_box_date {
+  float: left;
+  margin-left: 50px;
+  width: 240px;
+}
+/* line 320, ../../app/stylesheets/main.scss */
+.info_box_date p {
+  text-align: center;
+  padding-top: 110px;
+  font-size: 15px;
+}
+
+/* line 326, ../../app/stylesheets/main.scss */
+.info_box_theme {
+  float: left;
+  margin-left: 20px;
+  width: 240px;
+}
+/* line 330, ../../app/stylesheets/main.scss */
+.info_box_theme a {
+  color: #3b3b3b;
+  margin-left: 1px;
+  margin-right: 1px;
+  height: 19px;
+  padding-top: 4px;
+  text-align: right;
+  font: normal 11px Tahoma,sans-serif;
+  padding-right: 20px;
+  display: block;
+}
+/* line 340, ../../app/stylesheets/main.scss */
+.info_box_theme a:hover {
+  background: url("../images/toptext.png") repeat-x;
+}
+/* line 345, ../../app/stylesheets/main.scss */
+.info_box_theme a.is {
+  margin-top: 34px;
+  padding-top: 4px;
+}
+/* line 346, ../../app/stylesheets/main.scss */
+.info_box_theme a.sv {
+  margin-top: 1px;
+}
+/* line 347, ../../app/stylesheets/main.scss */
+.info_box_theme a.dn {
+  margin-top: 1px;
+}
+
+/* line 349, ../../app/stylesheets/main.scss */
+.info_box_mesto {
+  margin-left: 20px;
+  width: 240px;
+}
+/* line 352, ../../app/stylesheets/main.scss */
+.info_box_mesto a {
+  color: #3b3b3b;
+  margin-left: 1px;
+  margin-right: 1px;
+  height: 19px;
+  padding-top: 4px;
+  text-align: right;
+  font: normal 11px Tahoma,sans-serif;
+  padding-right: 20px;
+  display: block;
+}
+/* line 362, ../../app/stylesheets/main.scss */
+.info_box_mesto a:hover {
+  background: url("../images/toptext.png") repeat-x;
+}
+/* line 367, ../../app/stylesheets/main.scss */
+.info_box_mesto a.pi {
+  margin-top: 58px;
+  padding-top: 4px;
+}
+/* line 368, ../../app/stylesheets/main.scss */
+.info_box_mesto a.ro {
+  margin-top: 1px;
+}
+/* line 369, ../../app/stylesheets/main.scss */
+.info_box_mesto a.zv {
+  margin-top: 1px;
+}
+
+/* line 371, ../../app/stylesheets/main.scss */
+.menu_but {
+  border-right: solid 1px #3b3b3b;
+  background: url("../images/main/left_cross.png") left no-repeat, url("../images/main/menu_bg.png") repeat-x;
+  font: normal 62.5% Tahoma, sans-serif;
+  height: 25px;
+}
+/* line 376, ../../app/stylesheets/main.scss */
+.menu_but span {
+  font-size: 11px;
+  color: #3b3b3b;
+  display: block;
+  float: right;
+  padding-right: 6px;
+  padding-top: 6px;
+}
+
+/* line 386, ../../app/stylesheets/main.scss */
+a.bottom_menu {
+  text-decoration: none;
+  display: block;
+  font: normal 14px Tahoma,sans-serif;
+  color: #fff;
+}
+
+/* line 392, ../../app/stylesheets/main.scss */
+td#news {
+  background: url("../images/main/menu_news.png") no-repeat;
+  width: 363px;
+  height: 348px;
+}
+/* line 396, ../../app/stylesheets/main.scss */
+td#news a.bottom_menu {
+  margin-top: 231px;
+  margin-left: 220px;
+}
+/* line 399, ../../app/stylesheets/main.scss */
+td#news a.bottom_menu:hover {
+  margin-left: 210px;
+}
+
+/* line 402, ../../app/stylesheets/main.scss */
+td#acts {
+  background: url("../images/main/menu_acts.png") no-repeat;
+  width: 347px;
+  height: 348px;
+}
+/* line 406, ../../app/stylesheets/main.scss */
+td#acts a.bottom_menu {
+  margin-top: 145px;
+  margin-left: 205px;
+}
+/* line 409, ../../app/stylesheets/main.scss */
+td#acts a.bottom_menu:hover {
+  margin-left: 195px;
+}
+
+/* line 412, ../../app/stylesheets/main.scss */
+td#prog {
+  background: url("../images/main/menu_prog.png") no-repeat;
+  width: 276px;
+  height: 348px;
+}
+/* line 416, ../../app/stylesheets/main.scss */
+td#prog a.bottom_menu {
+  margin-top: 308px;
+  margin-left: 90px;
+}
+/* line 419, ../../app/stylesheets/main.scss */
+td#prog a.bottom_menu:hover {
+  margin-left: 80px;
+}
+
+/* line 422, ../../app/stylesheets/main.scss */
+td#fest {
+  background: url("../images/main/menu_fest.png") no-repeat;
+  width: 441px;
+  height: 282px;
+}
+/* line 426, ../../app/stylesheets/main.scss */
+td#fest a.bottom_menu {
+  margin-top: 200px;
+  margin-left: 260px;
+}
+/* line 429, ../../app/stylesheets/main.scss */
+td#fest a.bottom_menu:hover {
+  margin-left: 250px;
+}
+
+/* line 432, ../../app/stylesheets/main.scss */
+td#next {
+  background: url("../images/main/menu_next.png") no-repeat;
+  width: 545px;
+  height: 282px;
+}
+/* line 436, ../../app/stylesheets/main.scss */
+td#next a.bottom_menu {
+  margin-top: 146px;
+  margin-left: 290px;
+}
+/* line 439, ../../app/stylesheets/main.scss */
+td#next a.bottom_menu:hover {
+  margin-left: 280px;
+}
+
+/* line 442, ../../app/stylesheets/main.scss */
+#footer {
+  background: black url("../images/main/footer_top.png") top no-repeat;
+  width: 986px;
+  height: 126px;
+  padding-top: 246px;
+  color: #fff;
+  font: normal 13px Tahoma, sans-serif;
+}
+/* line 450, ../../app/stylesheets/main.scss */
+#footer img {
+  width: 32px;
+  height: 32px;
+}
+/* line 454, ../../app/stylesheets/main.scss */
+#footer #social_href {
+  float: left;
+  margin-left: 50px;
+}
+/* line 455, ../../app/stylesheets/main.scss */
+#footer #social_href span {
+  display: block;
+  clear: right;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+/* line 465, ../../app/stylesheets/main.scss */
+#footer #social_href a {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+/* line 471, ../../app/stylesheets/main.scss */
+#footer #info_href {
+  float: left;
+  margin-left: 40px;
+}
+/* line 472, ../../app/stylesheets/main.scss */
+#footer #info_href span {
+  display: block;
+  clear: right;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+/* line 482, ../../app/stylesheets/main.scss */
+#footer #info_href a {
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+/* line 488, ../../app/stylesheets/main.scss */
+#footer #kontakt_href {
+  float: left;
+  margin-left: 40px;
+}
+/* line 489, ../../app/stylesheets/main.scss */
+#footer #kontakt_href span {
+  display: block;
+  clear: right;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+/* line 499, ../../app/stylesheets/main.scss */
+#footer #kontakt_href a {
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+/* line 505, ../../app/stylesheets/main.scss */
+#footer #footer_info {
+  position: relative;
+  top: 84px;
+  background: black url("../images/main/footer_info.png") bottom no-repeat;
+  width: 986px;
+  height: 42px;
+}
+/* line 511, ../../app/stylesheets/main.scss */
+#footer #footer_info span {
+  position: absolute;
+  display: block;
+  margin-left: 20px;
+  padding-top: 8px;
+  font: normal 10px Tahoma,sans-serif;
+  letter-spacing: 1px;
+}
+/* line 522, ../../app/stylesheets/main.scss */
+#footer #footer_info a {
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  font: normal 10px Tahoma,sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  margin-left: 812px;
+  margin-top: 8px;
+}
+
+/* line 535, ../../app/stylesheets/main.scss */
+#otbivka {
+  position: relative;
+  margin-top: -42px;
+  /* а здесь нужно указать отрицательное значение высоты подвала */
+  display: block;
+  clear: both;
+  height: 42px;
+  background: url("../images/layout/footer_left.png") left no-repeat, url("../images/layout/footer_right.png") repeat-x;
+}
+/* line 536, ../../app/stylesheets/main.scss */
+#otbivka span {
+  float: left;
+  display: block;
+  margin-left: 20px;
+  padding-top: 8px;
+  font: normal 11px Tahoma,sans-serif;
+  letter-spacing: 1px;
+}
+/* line 546, ../../app/stylesheets/main.scss */
+#otbivka a {
+  display: block;
+  float: right;
+  text-decoration: none;
+  font: normal 11px Tahoma,sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  margin-right: 50px;
+  margin-top: 8px;
+}

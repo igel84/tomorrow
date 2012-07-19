@@ -1,0 +1,121 @@
+$border: #cacbcc;
+h1 { 
+		font: normal 16px Tahoma,sans-serif;
+		margin: {
+			//left:10px;
+			//right:10px;
+			bottom:10px;
+		}
+		padding: {
+			bottom: 10px;
+			top:10px;
+		}
+		border-bottom: solid 2px #700; 
+	}
+h2 { 
+		font: bold 12px Tahoma,sans-serif;
+		margin: {
+			left:10px;
+			right:10px;
+			bottom:10px;
+		}
+		padding: {
+			bottom: 10px;
+			top:10px;
+		}
+	}
+td {
+	vertical-align: top;
+}
+#admin_menu ul {
+	margin-right: 10px;
+	font: bold 15px Tahoma,sans-serif;
+	li {
+		padding:8px;
+		margin-bottom:3px;		
+		background:#bbb;
+		ul li {
+			//background:#ddd;
+			padding: {
+				top:2px;
+				bottom:2px;
+				left:20px;
+			}
+			font: normal 13px Tahoma,sans-serif;			
+		}
+		.first {
+			background:#bbb;
+			padding-left:0;
+			font: bold 13px Tahoma,sans-serif;
+		}
+	}
+}
+#add_pokaz { 
+	font-family: 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;	
+	font-size: 13px;
+	text-align:center;
+	width:130px; 
+	height:28px;
+	margin: {
+		bottom:10px; 
+	}
+}
+#pokaz_table {
+	width:100%;
+	margin-bottom:10px;
+	col:nth-child(2n+3) { text-align: center;}
+	td {
+		padding: {
+			top:2px;
+			bottom:2px;
+		}
+		border-bottom: solid 1px lighten($border, 10%);
+	}
+	td:nth-child(1) { width:80px; text-align:right; }
+	td:nth-child(2) { width:80px; text-align:center; }
+	td:nth-child(3) { width:60px; text-align:right; }
+	td:nth-child(4) { width:80px; text-align:center; }
+	td:nth-child(5) { width:60px; text-align:right; }
+	td:nth-child(6) { width:240px; text-align:center; }
+}
+#pokaz {
+	background: lighten($border, 15%);
+	border: solid 1px $border;
+	padding:10px;
+	font: bold 12px Tahoma,sans-serif;	
+	//.pokaz { padding:0; margin:0; height:20px; }
+	//td { vertical-align:center; }
+	#date_but {
+		float:left;
+		margin-right:30px;
+		//text-height:20px;
+		//label { height:20px; }
+		//input { padding-bottom:3px; }
+	}
+	.date { 
+		margin: {
+			right:10px;
+			top:7px;
+		}
+		float:left; 
+	}
+	#time_text {
+		float:left;
+		input { width:22px;}
+	}
+	#mesto {
+		margin-top:10px;
+		//label { height:60px; margin-top:0; margin-bottom:0; }
+		//label:nth-child(1) { width:100px; }
+		//label:nth-child(2) { width:100px; }
+		//label:nth-child(3) { width:100px; }
+		//label:nth-child(4) { width:100px; }
+		//label:nth-child(5) { width:60px; }
+		//label:nth-child(6) { width:30px; }
+	}
+	#send_pokaz { 
+		float:left; 
+		margin-top:10px;
+		margin-left:0;
+	}
+}

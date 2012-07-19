@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>
+<h2>
+<%= @name %>
+</h2>
+<strong>
+<%= @article %>
+</strong>
+</p>
+</body>
+</html>
