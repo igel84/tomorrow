@@ -58,9 +58,9 @@
 							%td
 								#prog
 									- if !eng?
-										%h2 ПРОГРАММА 2011
+										%h2 ПРОГРАММА 2012
 									- else
-										%h2 PROGRAMME 2011
+										%h2 PROGRAMME 2012
 						%tr
 							%td
 								#prog_menu
@@ -110,14 +110,14 @@
 													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
 							%li
 								- if !eng?
-									=link_to "ПРОГРАММА 2011", all_pages_path(:id=>2), :class=>'but prog'
+									=link_to "ПРОГРАММА 2012", all_pages_path(:id=>2), :class=>'but prog'
 									- if page = Page.children(2)
 										%ul
 											- page.each do |ch|
 												- if !ch.eng?
 													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
 								- else
-									%a.but.prog{:href=>'#'} PROGRAMME 2011
+									%a.but.prog{:href=>'#'} PROGRAMME 2012
 									- if page = Page.children(2)
 										%ul
 											- page.each do |ch|
