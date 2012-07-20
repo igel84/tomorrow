@@ -1,7 +1,7 @@
 class AuthentificationsController < ApplicationController
   
-  def index
-    render :layout => false
+  def new
+    #render :layout => false
   end
   
   def login
@@ -9,7 +9,7 @@ class AuthentificationsController < ApplicationController
       cookies['admin'] = 'true'
       redirect_to params[:return_to] || list_path
     else
-      render :action => 'index', :layout => false
+      render :action => 'index'#, :layout => false
     end
   end
   

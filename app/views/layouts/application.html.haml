@@ -39,28 +39,20 @@
 											%td.first СБ
 											%td.first ВС
 										%tr
-											%td 26
-											%td 27
-											%td 28
-											%td 29
-											%td 30
-											%td 1
-											%td 2
-										%tr
-											- 3.upto(9) do |n|
-												%td= n
-										%tr
-											- 10.upto(16) do |n|
-												%td= n
-										%tr
-											- 17.upto(23) do |n|
+											- 1.upto(7) do |n|
 												%td
 													- if kalend? n
 														= link_to n.to_s, kalend_date_path(:id=>n)
 													- else
 														= n
 										%tr
-											- 24.upto(30) do |n|
+											- 8.upto(14) do |n|
+												%td= n
+										%tr
+											- 15.upto(21) do |n|
+												%td= n
+										%tr
+											- 22.upto(28) do |n|
 												%td= n
 						%tr
 							%td
@@ -146,7 +138,7 @@
 									= link_to 'КАЛЕНДАРЬ', all_pages_path(:id=>5), :class=>'but kale'
 									- if page = Page.children(5)
 										%ul
-											- 18.upto(24) do |n|
+											- 2.upto(7) do |n|
 												- if kalend? n
 													%li.kalend
 														= link_to n.to_s+" октября", kalend_date_path(:id=>n)
@@ -154,7 +146,7 @@
 									= link_to 'CALENDAR', all_pages_path(:id=>5), :class=>'but kale'
 									- if page = Page.children(5)
 										%ul
-											- 18.upto(24) do |n|
+											- 2.upto(7) do |n|
 												- if kalend? n
 													%li.kalend
 														= link_to "October "+n.to_s, kalend_date_path(:id=>n)

@@ -1,17 +1,20 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem "rails", "~> 3.2.6"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'ckeditor', "3.7.0.rc3"
+
 gem 'jquery-rails', '>= 0.2.6'
 gem 'haml'
 gem 'compass'
 gem 'unicorn'
-gem 'paperclip'
+#gem 'paperclip'
 #gem 'acts_as_tree'
 #gem 'yaml_db', :git => 'git://github.com/ludicast/yaml_db.git'
 

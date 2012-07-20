@@ -3,7 +3,7 @@
 		= f.hidden_field :page_id
 		.date Дата проведения:	
 		#date_but
-			- 18.upto(23) do |d|
+			- 2.upto(7) do |d|
 				= radio_button_tag 'pokaz[date]', d, false
 				= label_tag 'pokaz_date_'+d.to_s, d.to_s, :class=>'pokaz'
 		#time_text

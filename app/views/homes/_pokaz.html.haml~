@@ -1,6 +1,0 @@
-- page.pokazs.each do |p|
-	.pokaz_row
-		.pokaz_info.date= p.date.to_s+" октября в " if p.date
-		.pokaz_info.time= p.time if p.time
-		.pokaz_info.mesto= "кинотеатр "+p.mesto.name if p.mesto
-	%br/

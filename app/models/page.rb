@@ -1,6 +1,10 @@
 class Page < ActiveRecord::Base
   #after_create :send_mails
-  has_attached_file :photo
+  #has_attached_file :photo
+  image_url = "/system/:attachment/:id/:style/:basename.:extension"
+  image_path = ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
+
+  has_attached_file :photo, url: image_url, path: image_path
   #,
   #  :styles => {
   #    :thumb=> "100x100#",

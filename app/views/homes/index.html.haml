@@ -62,29 +62,21 @@
 												%td.first СБ
 												%td.first ВС
 											%tr
-												%td 26
-												%td 27
-												%td 28
-												%td 29
-												%td 30
-												%td 1
-												%td 2
+											- 1.upto(7) do |n|
+												%td
+													- if kalend? n
+														= link_to n.to_s, kalend_date_path(:id=>n)
+													- else
+														= n
 											%tr
-												- 3.upto(9) do |n|
+												- 8.upto(14) do |n|
 													%td= n
 											%tr
-												- 10.upto(16) do |n|
+												- 15.upto(21) do |n|
 													%td= n
 											%tr
-												- 17.upto(23) do |n|
-													%td	
-														- if kalend? n
-															= link_to n.to_s, kalend_date_path(:id=>n)
-														- else
-															= n
-											%tr
-												- 24.upto(30) do |n|
-													%td= n				
+												- 22.upto(28) do |n|
+													%td= n		
 								#key_art
 									= image_tag("main/key-art#{(rand(3)+1).to_s}.png", :id=>"img")
 							%td.r

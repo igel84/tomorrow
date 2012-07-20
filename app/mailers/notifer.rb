@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Notifer < ActionMailer::Base
   default :from => "2morrowfest@eventfactory.ru"
 

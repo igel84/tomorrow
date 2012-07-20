@@ -1,28 +1,30 @@
 #InitialRelease::Application.routes.draw do
 InitialRelease::Application.routes.draw do
 
+  mount Ckeditor::Engine => "/ckeditor"
+
   root :to => "homes#index"
-  match 'about' => "homes#show", :id=>'1', :as => 'about'
-  match 'program' => "homes#show", :id=>'2', :as => 'program'
-  match 'project_tomorrow' => "homes#show", :id=>'3', :as => 'project_tomorrow'
-  match 'actions' => "homes#show", :id=>'4', :as => 'actions'
-  match 'kalend' => "homes#show", :id=>'5', :as => 'kalend'
-  match 'kalend_date/:id' => "homes#kalend", :as => 'kalend_date'
-  match 'all_pages/:id' => "homes#all", :as => 'all_pages'
-  match 'rss' => "homes#rss", :as => 'rss'
-  match 'show/:id' => "homes#show", :as => 'show'
+  get 'about' => "homes#show", :id=>'1', :as => 'about'
+  get 'program' => "homes#show", :id=>'2', :as => 'program'
+  get 'project_tomorrow' => "homes#show", :id=>'3', :as => 'project_tomorrow'
+  get 'actions' => "homes#show", :id=>'4', :as => 'actions'
+  get 'kalend' => "homes#show", :id=>'5', :as => 'kalend'
+  get 'kalend_date/:id' => "homes#kalend", :as => 'kalend_date'
+  get 'all_pages/:id' => "homes#all", :as => 'all_pages'
+  get 'rss' => "homes#rss", :as => 'rss'
+  get 'show/:id' => "homes#show", :as => 'show'
     
-  match 'admin' => "authentifications#index"
-  match 'login' => "authentifications#login"
-  match 'logout' => "authentifications#logout", :as=>'logout'
+  get 'admin' => "authentifications#index"
+  post 'login' => "authentifications#login"
+  get 'logout' => "authentifications#logout", :as=>'logout'
   
-  match 'language' => "homes#language", :as=>'language'
+  get 'language' => "homes#language", :as=>'language'
   
-  match 'list' => "homes#list", :as=>'list'
-  match 'new_pages/:id' => "homes#new", :as=>'new_pages'
-  match 'create_pages' => "homes#create", :as=>'create_pages'
-  match 'edit_pages' => "homes#edit", :as=>'edit_pages'
-  match 'update_pages' => "homes#update", :as=>'update_pages'
+  get 'list' => "homes#list", :as=>'list'
+  get 'new_pages/:id' => "homes#new", :as=>'new_pages'
+  get 'create_pages' => "homes#create", :as=>'create_pages'
+  get 'edit_pages' => "homes#edit", :as=>'edit_pages'
+  post 'update_pages' => "homes#update", :as=>'update_pages'
     
   resources :subscribes
   resources :pokazs

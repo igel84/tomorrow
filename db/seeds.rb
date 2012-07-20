@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+Pokaz.all.each do |p|
+  if p.page
+    PageHref.where(page_id:p.page.id).destroy_all
+    PageHref.where(href_id:p.page.id).destroy_all
+    p.page.destroy 
+  end
+end

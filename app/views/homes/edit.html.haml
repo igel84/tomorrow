@@ -9,6 +9,6 @@
 		%tr#pokaz_table_end{:colspan=>'7'}
 	#add_pokaz= link_to "добавить показ", { :controller=>"pokazs", :action => "new", :id=>@page.id }, :remote=>true
 //	= render :partial=>'pokazs/form', :locals=> { :pokaz => Pokaz.new(:date=>0) }
-- form_for :page, :html => { :multipart => true }, :url=> update_pages_path do |f|
+= form_for :page, :html => { :multipart => true }, :url=> update_pages_path do |f|
 	= f.hidden_field(:id, :value => @page.id)
 	= render :partial=>'form_page', :locals => {:f => f, :parent => @curent_page.id, :position => @page.position, :page => @page }
