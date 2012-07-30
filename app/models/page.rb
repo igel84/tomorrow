@@ -18,6 +18,10 @@ class Page < ActiveRecord::Base
     Page.find(:all, :conditions => ["parent_id = ?", id])
   end
   
+  def self.children_ru(id)
+    Page.find(:all, :conditions => ["parent_id = ? AND (eng = ? OR eng IS NULL)", id, false])
+  end
+
   def hrefs
     PageHref.find(:all, :conditions => ["page_id = ?", id])
   end

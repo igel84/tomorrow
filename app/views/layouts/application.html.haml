@@ -1,8 +1,8 @@
 !!!
 %html
 	%head
-		%title 5 фестиваль
-		= favicon_link_tag 'title_logo.png'
+		%title Фестиваль 2morrow/Завтра
+		=# favicon_link_tag 'title_logo.png'
 		%meta{:name=>"keywords", :content=>"кинофестиваль"}
 		%meta{:name=>"description", :content=>"кинофестиваль"}		
 		= stylesheet_link_tag "reset", "ie.css", "screen.css", "print.css", "fancy", "layout"
@@ -125,7 +125,7 @@
 													%li= link_to truncate(ch.name, :length=>30, :ommision=>'...'), show_path(:id=>ch.id)
 							%li
 								- if !eng?
-									= link_to 'КИНОФОРУМ "ПРОЕКТ НА ЗАВТРА"', all_pages_path(:id=>3), :class=>'but next'								
+									= link_to 'КИНОКАМПУС "ПАРТИЗАН"', all_pages_path(:id=>3), :class=>'but next'								
 									- if page = Page.children(3)
 										%ul
 											- page.each do |ch|

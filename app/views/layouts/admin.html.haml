@@ -1,7 +1,7 @@
 !!!
 %html
 	%head
-		%title завтра/2morrow
+		%title Фестиваль 2morrow/Завтра
 		%meta{:name=>"keywords", :content=>"кинофестиваль"}
 		%meta{:name=>"description", :content=>"кинофестиваль"}		
 		= stylesheet_link_tag "reset", "ie.css", "screen.css", "print.css", "admin", "ui-lightness/jquery-ui-1.8.13.custom.css"
@@ -28,7 +28,7 @@
 											- Page.children(page.id).each do |ch|
 												- if !(page.id==4 && ch.id==6)
 													%li
-														= link_to ch.name, edit_pages_path(:id=>ch.id)
+														= link_to ch.name.strip == '' ? '-- ' + ch.id.to_s : ch.name, edit_pages_path(:id=>ch.id)
 							%li
 								Тема фестиваля
 								%ul
@@ -46,6 +46,6 @@
 										= link_to "добавить статью", new_pages_path(:id=>6)
 										- Page.children(6).each do |ch|
 											%li
-												= link_to ch.name, edit_pages_path(:id=>ch.id)
+												= link_to ch.name == '' ? '-- ' + ch.id.to_s : ch.name, edit_pages_path(:id=>ch.id)
 				%td
 					= yield

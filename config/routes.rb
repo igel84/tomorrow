@@ -22,7 +22,8 @@ InitialRelease::Application.routes.draw do
   
   get 'list' => "homes#list", :as=>'list'
   get 'new_pages/:id' => "homes#new", :as=>'new_pages'
-  get 'create_pages' => "homes#create", :as=>'create_pages'
+  post 'create_pages' => "homes#create", :as=>'create_pages'
+  get 'destroy_page/:id' => "homes#destroy", as: 'destroy_page'
   get 'edit_pages' => "homes#edit", :as=>'edit_pages'
   post 'update_pages' => "homes#update", :as=>'update_pages'
     

@@ -77,6 +77,11 @@ class HomesController < ApplicationController
     redirect_to :list, :notice=>'страница успешно добавлена'
   end
 	
+  def destroy
+    Page.find(params[:id]).destroy
+    redirect_to :list, :notice=>'страница успешно удалена'
+  end
+
 	def all
     @pages = Page.find(:all, :conditions => ["parent_id=?", params[:id]])
   end

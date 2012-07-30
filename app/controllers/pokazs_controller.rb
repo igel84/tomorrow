@@ -33,29 +33,12 @@ class PokazsController < ApplicationController
   def show
     @title = ''
     @pages = []    
-    case params[:id]
-      when '7'
-        @title = 'Пионер'
-        Pokaz.find(:all, :conditions => ["mesto_id=4"], :order => 'date').each do |pokaz|
-          @pages << pokaz.page
-        end
-        Pokaz.find(:all, :conditions => ["mesto_id=5"], :order => 'date').each do |pokaz|
-          @pages << pokaz.page
-        end
-      when '8'
-        @title = 'Ролан'
-        Pokaz.find(:all, :conditions => ["mesto_id=1"], :order => 'date').each do |pokaz|
-          @pages << pokaz.page
-        end
-        Pokaz.find(:all, :conditions => ["mesto_id=2"], :order => 'date').each do |pokaz|
-          @pages << pokaz.page
-        end
-      else
-        @title = Mesto.find(params[:id]).name
-        Pokaz.find(:all, :conditions => ["mesto_id=?",params[:id]], :order => 'date').each do |pokaz|
-          @pages << pokaz.page
-        end
-    end      
+    
+    mesto = Mesto.find(params[:id])
+    @title = mesto.name
+    Pokaz.where(mesto_id: mesto.id).order('date').each do |pokaz|
+      @pages << pokaz.page
+    end
     @pages = @pages.uniq
   end
   
